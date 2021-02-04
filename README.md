@@ -27,7 +27,7 @@ You must enable TypeScript compiler options. And run deno with option
 import {
   binding,
   named,
-} from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts";
+} from "https://deno.land/x/automated-omusubi@0.0.3/mod.ts";
 
 @named
 class Injectable {
