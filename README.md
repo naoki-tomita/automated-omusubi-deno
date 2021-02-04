@@ -1,14 +1,14 @@
 # automated-omusubi
 
-Improved [omusubi](https://www.npmjs.com/package/omusubi).
-You do not need to register.
+Improved [omusubi](https://www.npmjs.com/package/omusubi). You do not need to
+register.
 
 # how to use
 
 **important**
 
-You must enable TypeScript compiler options.
-And run deno with option `deno run xxxx.ts -c tsconfig.ts`.
+You must enable TypeScript compiler options. And run deno with option
+`deno run xxxx.ts -c tsconfig.ts`.
 
 ```javascript
 {
@@ -20,10 +20,14 @@ And run deno with option `deno run xxxx.ts -c tsconfig.ts`.
   }
 }
 ```
+
 ## Example usage
 
 ```typescript
-import { named, binding } from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts"
+import {
+  binding,
+  named,
+} from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts";
 
 @named
 class Injectable {
@@ -47,7 +51,10 @@ console.log(new Injected().func());
 It can be used in `dependency inversion principle`
 
 ```typescript
-import {namedWith, bindBy} from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts";
+import {
+  bindBy,
+  namedWith,
+} from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts";
 
 abstract class AbstractInjectable {
   x = "bar";
@@ -73,7 +80,10 @@ console.log(new Injected().func());
 ## identifier specified injection and explicitly instance registration
 
 ```typescript
-import {register, bind} from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts";
+import {
+  bind,
+  register,
+} from "https://deno.land/x/automated-omusubi@v0.0.1/mod.ts";
 
 class Injectable {
   y = "foo";
