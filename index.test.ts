@@ -1,8 +1,13 @@
 import { resetBinding } from "./index.ts";
-import { bindBy, binding, named, namedWith, register, instanceOf } from "./mod.ts";
+import {
+  bindBy,
+  binding,
+  instanceOf,
+  named,
+  namedWith,
+  register,
+} from "./mod.ts";
 import { assert, assertStrictEquals } from "./test_deps.ts";
-
-
 
 Deno.test("binding and named / should access TestInjectable1 from TestInjected1", () => {
   resetBinding();
@@ -61,4 +66,4 @@ Deno.test("instanceOf should return registered instance.", () => {
   }
 
   assert(instanceOf(TestInjectable4) instanceof TestInjectable4);
-})
+});
