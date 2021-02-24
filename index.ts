@@ -37,6 +37,10 @@ export function register(instance: any) {
   };
 }
 
+export function instanceOf(identifier: any) {
+  return map.get(identifier);
+}
+
 export function resetBinding() {
   map.clear();
 }
